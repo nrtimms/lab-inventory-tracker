@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Navbartoo from "../../components/navbar2";
 
 const ListChemicals = ({ setAuth }) => {
     let navigate = useNavigate();
@@ -44,6 +45,7 @@ const ListChemicals = ({ setAuth }) => {
     }, []);
 
     return (
+        <Navbartoo setAuth={setAuth}>
         <div>
             <h1>Chemical Library</h1>
             <div>
@@ -67,6 +69,7 @@ const ListChemicals = ({ setAuth }) => {
                 Logout
             </button>
         </div>
+        </Navbartoo>
     );
  };
 

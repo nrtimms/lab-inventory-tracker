@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from "react";
 import { Link, Navigate } from "react-router-dom";
+import Navbar from "../components/navbar";
 
 const Login = ({setAuth}) => {
     const [inputs, setInputs] = useState({
@@ -38,6 +39,7 @@ const Login = ({setAuth}) => {
       };
 
   return (
+    <Navbar>
     <Fragment>
     <h1 className="mt-5 text-center">Login</h1>
     <form onSubmit={onSubmitForm}>
@@ -59,6 +61,7 @@ const Login = ({setAuth}) => {
     </form>
     <Link to="/register">register</Link>
   </Fragment>
+  </Navbar>
   );
 };
 

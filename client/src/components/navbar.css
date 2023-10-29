@@ -1,0 +1,214 @@
+.app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.app-content-container {
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: nowrap;
+}
+
+.app-sidebar-container {
+    background-color: #f0f0f0;
+}
+
+.app-content {
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.top-navbar {
+    background-color: #FFC0CB;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 1;
+    height: 80px;
+}
+
+
+.logo {
+    width: 180px;
+}
+
+.navbar {
+    background-color: #FFC0CB;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-button {
+    background-color: white;
+    color: #000000;
+    border: 1px solid #FFC0CB;
+    padding: 10px 15px;
+    /* Increased padding */
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin-right: 5px;
+    border-radius: 5px;
+    /* Rounded corners */
+}
+
+.nav-button:last-child {
+    margin-right: 0;
+}
+
+.nav-button:hover {
+    background-color: #FFC0CB;
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow on hover */
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.side-button {
+    background-color: white;
+    color: #000000;
+    border: 1px solid #FFC0CB;
+    padding: 10px;
+    /* Increased padding */
+    display: block;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    border-radius: 5px;
+    /* Rounded corners */
+}
+
+.side-button:hover {
+    background-color: #FFC0CB;
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow on hover */
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 10px;
+    background-color: white;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+.dashboard-content {
+    display: flex;
+    flex-grow: 1;
+}
+
+.navbar {
+    background-color: #FFC0CB;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    /* Separate content into left and right */
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 5px;
+    /* Spacing between buttons */
+}
+
+.nav-button {
+    background-color: white;
+    color: #FFC0CB;
+    border: 1px solid #FFC0CB;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    border-radius: 5px;
+}
+
+.nav-button:hover {
+    background-color: #FFC0CB;
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.account-button {
+    background-color: white;
+    color: #000000;
+    border: 1px solid #FFC0CB;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    border-radius: 5px;
+    height: 50%;
+    font-size: 20px;
+}
+
+.account-button:hover {
+    background-color: #FFC0CB;
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Rest of the CSS remains the same */
+
+.navbar {
+    background-color: #FFC0CB;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-section {
+    display: flex;
+    /* Grouping logo and buttons */
+    align-items: center;
+    /* Vertical alignment */
+}
+
+.right-section {
+    display: flex;
+    /* Grouping logo and buttons */
+    align-items: center;
+    /* Vertical alignment */
+    margin-right: 12px;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.nav-button {
+    background-color: white;
+    color: #000000;
+    border: 1px solid #FFC0CB;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+/* Rest of the CSS remains the same */
+
+.app-footer {
+    width: 100%;
+    display: flex;
+}

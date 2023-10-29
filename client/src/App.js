@@ -16,6 +16,8 @@ import Register from "./pages/Register";
 import CreateChemical from "./pages/chemicals/CreateChemical";
 import ChemicalDetails from "./pages/chemicals/ChemicalDetails";
 import UpdateChemical from "./pages/chemicals/UpdateChemical";
+import Navbar from "./components/navbar";
+import Navbartoo from "./components/navbar2";
 
 function App() {
   const checkAuthenticated = async () => {
@@ -45,7 +47,6 @@ function App() {
 
   return <Fragment>
     <Router>
-      <div className="container">
       <Routes>
         <Route path = "/" Component = {props => !isAuthenticated ? (<Landing {...props} />) : (<Navigate to="/chemicals" />) } />
         <Route path = "/login" Component = {props => !isAuthenticated ? (<Login {...props} setAuth={setAuth} />) : (<Navigate to="/chemicals"/>) } />
@@ -55,7 +56,6 @@ function App() {
         <Route path = "/chemicals/:id" element = {<ChemicalDetails />} />
         <Route path = "chemicals/:id/update" element = {<UpdateChemical />} />
       </Routes>
-      </div>
     </Router>
   </Fragment>;
 }
