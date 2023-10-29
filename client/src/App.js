@@ -13,6 +13,7 @@ import ListChemicals from "./pages/chemicals/ListChemicals";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import CreateChemical from "./pages/chemicals/CreateChemical";
+import ChemicalDetails from "./pages/chemicals/ChemicalDetails";
 
 function App() {
   const checkAuthenticated = async () => {
@@ -48,6 +49,7 @@ function App() {
         <Route path = "/register" Component = {props => !isAuthenticated ? (<Register {...props} setAuth={setAuth} />) : (<Navigate to="/login"/>)} />
         <Route path = "/chemicals" Component = {props => isAuthenticated ? (<ListChemicals {...props} setAuth={setAuth} />) : (<Navigate to="/login"/>)} />
         <Route path = "/chemicals/create" element = {<CreateChemical />} />
+        <Route path = "/chemicals/:id" element = {<ChemicalDetails />} />
       </Routes>
       </div>
     </Router>
