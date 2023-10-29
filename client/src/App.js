@@ -9,9 +9,9 @@ import {
 } from "react-router-dom";
 
 //components
-//import Dashboard from "./components/chemicals/ListChemicals";
-import Login from "./components/Login";
-import Register from "./components/Register";
+import ListChemicals from "./pages/chemicals/ListChemicals";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 function App() {
   const checkAuthenticated = async () => {
@@ -43,8 +43,9 @@ function App() {
     <Router>
       <div className="container">
       <Routes>
-        <Route path = "/login" Component = {props => !isAuthenticated ? (<Login {...props} setAuth={setAuth} />) : (<Navigate to="/dashboard"/>) } />
+        <Route path = "/login" Component = {props => !isAuthenticated ? (<Login {...props} setAuth={setAuth} />) : (<Navigate to="/chemicals"/>) } />
         <Route path = "/register" Component = {props => !isAuthenticated ? (<Register {...props} setAuth={setAuth} />) : (<Navigate to="/login"/>)} />
+        <Route path = "/chemicals" Component = {props => isAuthenticated ? (<ListChemicals {...props} setAuth={setAuth} />) : (<Navigate to="/login"/>)} />
       </Routes>
       </div>
     </Router>
