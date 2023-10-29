@@ -65,7 +65,69 @@ const UpdateChemical = (props) => {
                     onChange={(e) => setChem_name(e.target.value)}
                     type="text"
                     className="form-control"
-                    placeholder="Title"
+                    />
+                </div>
+                <h2>Molar mass:</h2>
+                <div className="col">
+                    <input
+                    value={molar_mass}
+                    onChange={(e) => setMolar_mass(e.target.value)}
+                    type="text"
+                    className="form-control"
+                    />
+                </div>
+                <h2>Current Amount:</h2>
+                <div className="col">
+                    <input
+                    value={current_amt}
+                    onChange={(e) => setCurrent_amt(e.target.value)}
+                    type="text"
+                    className="form-control"
+                    />
+                </div>
+                <h2>Units:</h2>
+                <div className="col">
+                    <input
+                    value={units}
+                    onChange={(e) => setUnits(e.target.value)}
+                    type="text"
+                    className="form-control"
+                    />
+                </div>
+                <h2>Chemical Location:</h2>
+                <div className="col">
+                    <input
+                    value={chem_loc}
+                    onChange={(e) => setChem_loc(e.target.value)}
+                    type="text"
+                    className="form-control"
+                    />
+                </div>
+                <h2>Vendor name:</h2>
+                <div className="col">
+                    <input
+                    value={vendor_name}
+                    onChange={(e) => setVendor_name(e.target.value)}
+                    type="text"
+                    className="form-control"
+                    />
+                </div>
+                <h2>Cat Number:</h2>
+                <div className="col">
+                    <input
+                    value={cat_num}
+                    onChange={(e) => setCat_num(e.target.value)}
+                    type="text"
+                    className="form-control"
+                    />
+                </div>
+                <h2>Cas Number:</h2>
+                <div className="col">
+                    <input
+                    value={cas_num}
+                    onChange={(e) => setCas_num(e.target.value)}
+                    type="text"
+                    className="form-control"
                     />
                 </div>
     <button onClick={handleSubmit} type="submit" className="btn btn-primary">

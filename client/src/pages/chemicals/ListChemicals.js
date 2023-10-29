@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ListChemicals = ({ setAuth }) => {
+    let navigate = useNavigate();
     const [chemicals, setChemicals] = useState("");
 
     const getProfile = async () => {
@@ -16,6 +18,15 @@ const ListChemicals = ({ setAuth }) => {
         } catch (err) {
             console.error(err.message);
         }
+    };
+
+    const handleNew = (e) => {
+        e.stopPropagation();
+        navigate(`/chemicals/create`);
+    };
+
+    const handleChemicalSelect = (id) => {
+        navigate(`/chemicals/${id}`);
     };
 
     const logout = async e => {
@@ -34,11 +45,11 @@ const ListChemicals = ({ setAuth }) => {
 
     return (
         <div>
-            <h1 className="mt-5">Dashboard</h1>
+            <h1>Chemical Library</h1>
             <div>
                 {chemicals && chemicals.map((chem) => (
                     <div>
-                        <p>{chem.chem_name}</p>
+                        <p onClick={() => handleChemicalSelect(chem.chem_id)}>{chem.chem_name}</p>
                         <p>{chem.molar_mass}</p>
                         <p>{chem.current_amt}</p>
                         <p>{chem.units}</p>
@@ -49,6 +60,9 @@ const ListChemicals = ({ setAuth }) => {
                     </div>
                 ))}
             </div>
+            <button onClick={e => handleNew(e)} className="btn btn-primary">
+                New
+            </button>
             <button onClick={e => logout(e)} className="btn btn-primary">
                 Logout
             </button>

@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 
 //components
+import Landing from "./pages/Landing";
 import ListChemicals from "./pages/chemicals/ListChemicals";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -46,6 +47,7 @@ function App() {
     <Router>
       <div className="container">
       <Routes>
+        <Route path = "/" Component = {props => !isAuthenticated ? (<Landing {...props} />) : (<Navigate to="/chemicals" />) } />
         <Route path = "/login" Component = {props => !isAuthenticated ? (<Login {...props} setAuth={setAuth} />) : (<Navigate to="/chemicals"/>) } />
         <Route path = "/register" Component = {props => !isAuthenticated ? (<Register {...props} setAuth={setAuth} />) : (<Navigate to="/login"/>)} />
         <Route path = "/chemicals" Component = {props => isAuthenticated ? (<ListChemicals {...props} setAuth={setAuth} />) : (<Navigate to="/login"/>)} />

@@ -28,33 +28,37 @@ const ChemicalDetails = () => {
     }, []);
 
 
-    // const handleDelete = async (e, id) => {
-    //     e.stopPropagation();
-    //     try {
-    //         const response = await ClothingFetch.delete(`/${id}`);
-    //         console.log(response);
-    //         navigate(`/viewitems`);
-    //     } catch (err) {
-    //         console.log(err);
-    //     }
-    // };
+    const handleDelete = async (e, id) => {
+        e.stopPropagation();
+        try {
+            await fetch(`http://localhost:3001/chemicals/${id}`, {
+              method: "DELETE",
+              headers: { jwt_token: localStorage.token }
+            });
+            navigate(`/chemicals`)
+          } catch (err) {
+            console.error(err.message);
+          }
+    };
 
-    // const handleUpdate = (e, id) => {
-    //     e.stopPropagation();
-    //     navigate(`/viewitems/${id}/update`);
-    // };
+    const handleUpdate = (e, id) => {
+        e.stopPropagation();
+        navigate(`/chemicals/${id}/update`);
+    };
 
 
     return (
         <div className="item-details">
             <h1>{selectedChemical.chem_name}</h1>
-            {/* <img className="center" src={selectedClothing.photo} alt='Photo Not Working' height="300px"/>
-            <h2>Color:</h2>
-            <div>{selectedClothing.color}</div>
-            <h2>Category:</h2>
-            <div>{selectedClothing.category}</div>
-            <button className="center" onClick={(e) => handleUpdate(e, selectedClothing.clothing_id)}>Edit</button>
-            <button className="center" onClick={(e) => handleDelete(e, selectedClothing.clothing_id)}>Delete</button> */}
+            <h2>{selectedChemical.molar_mass}</h2>
+            <h2>{selectedChemical.current_amt}</h2>
+            <h2>{selectedChemical.units}</h2>
+            <h2>{selectedChemical.chem_loc}</h2>
+            <h2>{selectedChemical.vendor_name}</h2>
+            <h2>{selectedChemical.cat_num}</h2>
+            <h2>{selectedChemical.cas_num}</h2>
+            <button className="btn btn-primary" onClick={(e) => handleUpdate(e, selectedChemical.chem_id)}>Edit</button>
+            <button className="btn btn-primary" onClick={(e) => handleDelete(e, selectedChemical.chem_id)}>Delete</button>
         </div>
     )
 };

@@ -1,6 +1,8 @@
 import React, { Fragment, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const CreateChemical = () => {
+    let navigate = useNavigate();
   const [chem_name, setChem_name] = useState("");
   const [molar_mass, setMolar_mass] = useState("");
   const [current_amt, setCurrent_amt] = useState("");
@@ -37,6 +39,8 @@ const CreateChemical = () => {
       setVendor_name("");
       setCat_num("");
       setCas_num("");
+
+      navigate(`/chemicals`);
     } catch (err) {
       console.error(err.message);
     }
@@ -47,56 +51,56 @@ const CreateChemical = () => {
       <form className="d-flex" onSubmit={onSubmitForm}>
         <input
           type="text"
-          placeholder="add todo"
+          placeholder="chemical name"
           className="form-control"
           value={chem_name}
           onChange={e => setChem_name(e.target.value)}
         />
         <input
           type="text"
-          placeholder="add todo"
+          placeholder="molar mass"
           className="form-control"
           value={molar_mass}
           onChange={e => setMolar_mass(e.target.value)}
         />
         <input
           type="text"
-          placeholder="add todo"
+          placeholder="current amount"
           className="form-control"
           value={current_amt}
           onChange={e => setCurrent_amt(e.target.value)}
         />
         <input
           type="text"
-          placeholder="add todo"
+          placeholder="units"
           className="form-control"
           value={units}
           onChange={e => setUnits(e.target.value)}
         />
         <input
           type="text"
-          placeholder="add todo"
+          placeholder="chemical location"
           className="form-control"
           value={chem_loc}
           onChange={e => setChem_loc(e.target.value)}
         />
         <input
           type="text"
-          placeholder="add todo"
+          placeholder="vendor name"
           className="form-control"
           value={vendor_name}
           onChange={e => setVendor_name(e.target.value)}
         />
         <input
           type="text"
-          placeholder="add todo"
+          placeholder="cat number"
           className="form-control"
           value={cat_num}
           onChange={e => setCat_num(e.target.value)}
         />
         <input
           type="text"
-          placeholder="add todo"
+          placeholder="cas number"
           className="form-control"
           value={cas_num}
           onChange={e => setCas_num(e.target.value)}
