@@ -30,16 +30,6 @@ const ListChemicals = ({ setAuth }) => {
         navigate(`/chemicals/${id}`);
     };
 
-    const logout = async e => {
-        e.preventDefault();
-        try {
-            localStorage.removeItem("token");
-            setAuth(false);
-        } catch (err) {
-            console.error(err.message);
-        }
-    };
-
     useEffect(() => {
         getProfile();
     }, []);
@@ -64,9 +54,6 @@ const ListChemicals = ({ setAuth }) => {
             </div>
             <button onClick={e => handleNew(e)} className="btn btn-primary">
                 New
-            </button>
-            <button onClick={e => logout(e)} className="btn btn-primary">
-                Logout
             </button>
         </div>
         </Navbartoo>

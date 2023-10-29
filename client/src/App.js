@@ -52,9 +52,9 @@ function App() {
         <Route path = "/login" Component = {props => !isAuthenticated ? (<Login {...props} setAuth={setAuth} />) : (<Navigate to="/chemicals"/>) } />
         <Route path = "/register" Component = {props => !isAuthenticated ? (<Register {...props} setAuth={setAuth} />) : (<Navigate to="/login"/>)} />
         <Route path = "/chemicals" Component = {props => isAuthenticated ? (<ListChemicals {...props} setAuth={setAuth} />) : (<Navigate to="/login"/>)} />
-        <Route path = "/chemicals/create" element = {<CreateChemical />} />
-        <Route path = "/chemicals/:id" element = {<ChemicalDetails />} />
-        <Route path = "chemicals/:id/update" element = {<UpdateChemical />} />
+        <Route path = "/chemicals/create" Component = {props => isAuthenticated ? (<CreateChemical {...props} setAuth={setAuth} />) : (<Navigate to="/login"/>)}/>
+        <Route path = "/chemicals/:id" Component = {props => isAuthenticated ? (<ChemicalDetails {...props} setAuth={setAuth} />) : (<Navigate to="/login"/>)} />
+        <Route path = "chemicals/:id/update" Component = {props => isAuthenticated ? (<UpdateChemical {...props} setAuth={setAuth} />) : (<Navigate to="/login"/>)} />
       </Routes>
     </Router>
   </Fragment>;

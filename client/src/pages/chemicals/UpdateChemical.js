@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import Navbartoo from "../../components/navbar2";
 
-const UpdateChemical = (props) => {
+const UpdateChemical = ({setAuth}) => {
     const { id } = useParams();
     let navigate = useNavigate();
     const [chem_name, setChem_name] = useState("");
@@ -57,6 +58,7 @@ const UpdateChemical = (props) => {
     };
 
     return (
+        <Navbartoo setAuth={setAuth}>
         <div>
                 <h2>Chem Name:</h2>
                 <div className="col">
@@ -133,7 +135,8 @@ const UpdateChemical = (props) => {
     <button onClick={handleSubmit} type="submit" className="btn btn-primary">
         Save
     </button>
-    </div>         
+    </div> 
+    </Navbartoo>        
   );
 };
 

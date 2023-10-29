@@ -1,7 +1,8 @@
 import React, { Fragment, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Navbartoo from "../../components/navbar2";
 
-const CreateChemical = () => {
+const CreateChemical = ({setAuth}) => {
     let navigate = useNavigate();
   const [chem_name, setChem_name] = useState("");
   const [molar_mass, setMolar_mass] = useState("");
@@ -46,6 +47,7 @@ const CreateChemical = () => {
     }
   };
   return (
+    <Navbartoo setAuth={setAuth}>
     <Fragment>
       <h1 className="text-center my-5">Input Todo</h1>
       <form className="d-flex" onSubmit={onSubmitForm}>
@@ -108,6 +110,7 @@ const CreateChemical = () => {
         <button className="btn btn-success ">Add</button>
       </form>
     </Fragment>
+    </Navbartoo>
   );
 };
 

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import Navbartoo from "../../components/navbar2";
 
 
-const ChemicalDetails = () => {
+const ChemicalDetails = ({setAuth}) => {
     let navigate = useNavigate();
     const { id } = useParams()
     const [ selectedChemical, setSelectedChemical ] = useState("");
@@ -48,6 +49,7 @@ const ChemicalDetails = () => {
 
 
     return (
+        <Navbartoo setAuth={setAuth}>
         <div className="item-details">
             <h1>{selectedChemical.chem_name}</h1>
             <h2>{selectedChemical.molar_mass}</h2>
@@ -60,6 +62,7 @@ const ChemicalDetails = () => {
             <button className="btn btn-primary" onClick={(e) => handleUpdate(e, selectedChemical.chem_id)}>Edit</button>
             <button className="btn btn-primary" onClick={(e) => handleDelete(e, selectedChemical.chem_id)}>Delete</button>
         </div>
+        </Navbartoo>
     )
 };
 
