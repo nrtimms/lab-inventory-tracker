@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbartoo from "../../components/navbar2";
 import config from "../../config"
+import "./ListChemicals.css"
 
 const ListChemicals = ({ setAuth }) => {
     let navigate = useNavigate();
@@ -37,28 +38,33 @@ const ListChemicals = ({ setAuth }) => {
 
     return (
         <Navbartoo setAuth={setAuth}>
-        <div>
-            <h1>Chemical Library!</h1>
             <div>
-                {chemicals && chemicals.map((chem) => (
-                    <div>
-                        <p onClick={() => handleChemicalSelect(chem.chem_id)}>{chem.chem_name}</p>
-                        <p>{chem.molar_mass}</p>
-                        <p>{chem.current_amt}</p>
-                        <p>{chem.units}</p>
-                        <p>{chem.chem_loc}</p>
-                        <p>{chem.vendor_name}</p>
-                        <p>{chem.cat_num}</p>
-                        <p>{chem.cas_num}</p>
-                    </div>
-                ))}
+                <h1 className="list-header">Chemical Library!</h1>
+                <button onClick={e => handleNew(e)} className="list-button">
+                    New
+                </button>
+                <div>
+                    <table className="list-table">
+                        <tr>
+                            <th>Chem Name</th>
+                            <th>Current Amount</th>
+                            <th>Units</th>
+                            <th>Location</th>
+                        </tr>
+                        {chemicals && chemicals.map((chem) => (
+                            <tr>
+                                <td onClick={() => handleChemicalSelect(chem.chem_id)}>{chem.chem_name}</td>
+                                <td>{chem.current_amt}</td>
+                                <td>{chem.units}</td>
+                                <td>{chem.chem_loc}</td>
+                            </tr>
+
+                        ))}
+                    </table>
+                </div>
             </div>
-            <button onClick={e => handleNew(e)} className="btn btn-primary">
-                New
-            </button>
-        </div>
         </Navbartoo>
     );
- };
+};
 
 export default ListChemicals;

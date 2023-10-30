@@ -1,0 +1,41 @@
+.details-container {
+   display: flex;
+}
+
+.details-left {
+    display: inline-block;
+    margin: auto;
+    margin-left: 25%;
+}
+
+.details-right {
+    display: inline-block;
+    margin: auto;
+    margin-right: 25%;
+}
+
+.details-photo {
+    height: 200px;
+}
+
+.chem-name {
+    text-align: center;
+    padding: 10px;
+}
+
+.details-button {
+    margin: auto;
+    display:block;
+}
+
+.details-padding {
+    padding: 10px;
+}
+
+.chem-details {
+    display: flex;
+}
+
+.detail-headers {
+    color: white;
+}

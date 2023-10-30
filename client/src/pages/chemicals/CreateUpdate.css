@@ -1,0 +1,22 @@
+.create-update-header {
+    text-align: center;
+}
+
+.create-update-text {
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 0;
+    
+}
+
+.create-update-input {
+    text-align: center;
+    margin: auto;
+    display: block;
+}
+
+.create-update-button {
+    margin: auto;
+    display: block;
+}

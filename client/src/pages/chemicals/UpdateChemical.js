@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Navbartoo from "../../components/navbar2";
 import config from "../../config";
+import "./CreateUpdate.css"
 
 const UpdateChemical = ({setAuth}) => {
     const { id } = useParams();
@@ -61,79 +62,80 @@ const UpdateChemical = ({setAuth}) => {
     return (
         <Navbartoo setAuth={setAuth}>
         <div>
-                <h2>Chem Name:</h2>
-                <div className="col">
+                <h1 className="create-update-header">Edit chemical</h1>
+                <p className="create-update-text">Chem Name:</p>
+                <div>
                     <input
                     value={chem_name}
                     onChange={(e) => setChem_name(e.target.value)}
                     type="text"
-                    className="form-control"
+                    className="create-update-input"
                     />
                 </div>
-                <h2>Molar mass:</h2>
-                <div className="col">
+                <p className="create-update-text">Molar mass:</p>
+                <div>
                     <input
                     value={molar_mass}
                     onChange={(e) => setMolar_mass(e.target.value)}
                     type="text"
-                    className="form-control"
+                    className="create-update-input"
                     />
                 </div>
-                <h2>Current Amount:</h2>
-                <div className="col">
+                <p className="create-update-text">Current Amount:</p>
+                <div>
                     <input
                     value={current_amt}
                     onChange={(e) => setCurrent_amt(e.target.value)}
                     type="text"
-                    className="form-control"
+                    className="create-update-input"
                     />
                 </div>
-                <h2>Units:</h2>
-                <div className="col">
+                <p className="create-update-text">Units:</p>
+                <div>
                     <input
                     value={units}
                     onChange={(e) => setUnits(e.target.value)}
                     type="text"
-                    className="form-control"
+                    className="create-update-input"
                     />
                 </div>
-                <h2>Chemical Location:</h2>
-                <div className="col">
+                <p className="create-update-text">Chemical Location:</p>
+                <div>
                     <input
                     value={chem_loc}
                     onChange={(e) => setChem_loc(e.target.value)}
                     type="text"
-                    className="form-control"
+                    className="create-update-input"
                     />
                 </div>
-                <h2>Vendor name:</h2>
-                <div className="col">
+                <p className="create-update-text">Vendor name:</p>
+                <div>
                     <input
                     value={vendor_name}
                     onChange={(e) => setVendor_name(e.target.value)}
                     type="text"
-                    className="form-control"
+                    className="create-update-input"
                     />
                 </div>
-                <h2>Cat Number:</h2>
-                <div className="col">
+                <p className="create-update-text">Cat Number:</p>
+                <div>
                     <input
                     value={cat_num}
                     onChange={(e) => setCat_num(e.target.value)}
                     type="text"
-                    className="form-control"
+                    className="create-update-input"
                     />
                 </div>
-                <h2>Cas Number:</h2>
-                <div className="col">
+                <p className="create-update-text">Cas Number:</p>
+                <div>
                     <input
                     value={cas_num}
                     onChange={(e) => setCas_num(e.target.value)}
                     type="text"
-                    className="form-control"
+                    className="create-update-input"
                     />
                 </div>
-    <button onClick={handleSubmit} type="submit" className="btn btn-primary">
+    <button onClick={handleSubmit} type="submit" className="create-update-button">
         Save
     </button>
     </div> 

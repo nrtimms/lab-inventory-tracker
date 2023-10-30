@@ -2,6 +2,7 @@ import React, { Fragment, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbartoo from "../../components/navbar2";
 import config from "../../config";
+import "./CreateUpdate.css"
 
 const CreateChemical = ({setAuth}) => {
     let navigate = useNavigate();
@@ -50,65 +51,73 @@ const CreateChemical = ({setAuth}) => {
   return (
     <Navbartoo setAuth={setAuth}>
     <Fragment>
-      <h1 className="text-center my-5">Input Todo</h1>
-      <form className="d-flex" onSubmit={onSubmitForm}>
+      <h1 className="create-update-header">Add new chemical</h1>
+      <form onSubmit={onSubmitForm}>
+      <p className="create-update-text">Chem Name:</p>
         <input
           type="text"
           placeholder="chemical name"
-          className="form-control"
+          className="create-update-input"
           value={chem_name}
           onChange={e => setChem_name(e.target.value)}
         />
+        <p className="create-update-text">Molar Mass:</p>
         <input
           type="text"
           placeholder="molar mass"
-          className="form-control"
+          className="create-update-input"
           value={molar_mass}
           onChange={e => setMolar_mass(e.target.value)}
         />
+        <p className="create-update-text">Current Amount:</p>
         <input
           type="text"
           placeholder="current amount"
-          className="form-control"
+          className="create-update-input"
           value={current_amt}
           onChange={e => setCurrent_amt(e.target.value)}
         />
+        <p className="create-update-text">Units:</p>
         <input
           type="text"
           placeholder="units"
-          className="form-control"
+          className="create-update-input"
           value={units}
           onChange={e => setUnits(e.target.value)}
         />
+        <p className="create-update-text">Location:</p>
         <input
           type="text"
           placeholder="chemical location"
-          className="form-control"
+          className="create-update-input"
           value={chem_loc}
           onChange={e => setChem_loc(e.target.value)}
         />
+        <p className="create-update-text">Vendor Name:</p>
         <input
           type="text"
           placeholder="vendor name"
-          className="form-control"
+          className="create-update-input"
           value={vendor_name}
           onChange={e => setVendor_name(e.target.value)}
         />
+        <p className="create-update-text">Category Number:</p>
         <input
           type="text"
           placeholder="cat number"
-          className="form-control"
+          className="create-update-input"
           value={cat_num}
           onChange={e => setCat_num(e.target.value)}
         />
+        <p className="create-update-text">Cas Number:</p>
         <input
           type="text"
           placeholder="cas number"
-          className="form-control"
+          className="create-update-input"
           value={cas_num}
           onChange={e => setCas_num(e.target.value)}
         />
-        <button className="btn btn-success ">Add</button>
+        <button className="create-update-button">Add</button>
       </form>
     </Fragment>
     </Navbartoo>

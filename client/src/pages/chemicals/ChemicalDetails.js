@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Navbartoo from "../../components/navbar2";
 import config from "../../config";
+import "./ChemicalDetails.css"
 
 
 const ChemicalDetails = ({setAuth}) => {
@@ -51,17 +52,23 @@ const ChemicalDetails = ({setAuth}) => {
 
     return (
         <Navbartoo setAuth={setAuth}>
-        <div className="item-details">
-            <h1>{selectedChemical.chem_name}</h1>
-            <h2>{selectedChemical.molar_mass}</h2>
-            <h2>{selectedChemical.current_amt}</h2>
-            <h2>{selectedChemical.units}</h2>
-            <h2>{selectedChemical.chem_loc}</h2>
-            <h2>{selectedChemical.vendor_name}</h2>
-            <h2>{selectedChemical.cat_num}</h2>
-            <h2>{selectedChemical.cas_num}</h2>
-            <button className="btn btn-primary" onClick={(e) => handleUpdate(e, selectedChemical.chem_id)}>Edit</button>
-            <button className="btn btn-primary" onClick={(e) => handleDelete(e, selectedChemical.chem_id)}>Delete</button>
+        <div className="details-container">
+            <div className="details-left">
+            <h1 className="chem-name">{selectedChemical.chem_name}</h1>
+            <img src="https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/201706/MIT-Predicting-Reactions-1_0.jpg?itok=q5Dlcw3w" alt="chem photo" className="details-photo"></img>
+            <div>
+            <div className="details-padding"><button className="details-button" onClick={(e) => handleUpdate(e, selectedChemical.chem_id)}>Edit</button></div>
+            <div className="details-padding"><button className="details-button" onClick={(e) => handleDelete(e, selectedChemical.chem_id)}>Delete</button></div>
+            </div>
+            </div>
+            <div className="details-right">
+            <div className="chem-details"><p className="detail-headers">Molar mass</p><p className="details">: {selectedChemical.molar_mass} g/mol</p></div>
+            <div className="chem-details"><p className="detail-headers">Current amount</p><p className="details">: {selectedChemical.current_amt} {selectedChemical.units}</p></div>
+            <div className="chem-details"><p className="detail-headers">Location</p><p className="details">: {selectedChemical.chem_loc}</p></div>
+            <div className="chem-details"><p className="detail-headers">Vendor</p><p className="details">: {selectedChemical.vendor_name}</p></div>
+            <div className="chem-details"><p className="detail-headers">Cat number</p><p className="details">: {selectedChemical.cat_num}</p></div>
+            <div className="chem-details"><p className="detail-headers">Cas number</p><p className="details">: {selectedChemical.molar_mass}</p></div>
+            </div>
         </div>
         </Navbartoo>
     )
