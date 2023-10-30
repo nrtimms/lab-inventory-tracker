@@ -46,6 +46,7 @@ const Login = ({setAuth}) => {
       <input
         type="text"
         name="email"
+        placeholder="email"
         value={email}
         onChange={e => onChange(e)}
         className="form-control my-3"
@@ -53,6 +54,7 @@ const Login = ({setAuth}) => {
       <input
         type="password"
         name="password"
+        placeholder="password"
         value={password}
         onChange={e => onChange(e)}
         className="form-control my-3"
