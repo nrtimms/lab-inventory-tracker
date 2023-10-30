@@ -1,0 +1,12 @@
+body {
+    background-color: #D8B4A0;
+}
+
+h1, p {
+    color: #223843;
+    text-align: center;
+}
+
+h1{
+    padding-top: 10%;
+}

@@ -45,7 +45,7 @@ const Register = ({ setAuth }) => {
     return (
         <Navbar>
         <Fragment>
-            <h1 className="mt-5 text-center">Register</h1>
+            <h1 className="mt-5 text-center">Sign Up</h1>
             <form onSubmit={onSubmitForm}>
                 <input
                     type="text"
