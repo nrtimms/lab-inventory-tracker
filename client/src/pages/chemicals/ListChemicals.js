@@ -38,7 +38,7 @@ const ListChemicals = ({ setAuth }) => {
     return (
         <Navbartoo setAuth={setAuth}>
         <div>
-            <h1>Chemical Library</h1>
+            <h1>Chemical Library!</h1>
             <div>
                 {chemicals && chemicals.map((chem) => (
                     <div>
