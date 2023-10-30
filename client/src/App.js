@@ -1,5 +1,4 @@
 import React, { Fragment, useState, useEffect } from "react";
-import './App.css';
 
 import {
   BrowserRouter as Router,
@@ -16,8 +15,6 @@ import Register from "./pages/Register";
 import CreateChemical from "./pages/chemicals/CreateChemical";
 import ChemicalDetails from "./pages/chemicals/ChemicalDetails";
 import UpdateChemical from "./pages/chemicals/UpdateChemical";
-import Navbar from "./components/navbar";
-import Navbartoo from "./components/navbar2";
 
 function App() {
   const checkAuthenticated = async () => {
