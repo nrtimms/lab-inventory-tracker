@@ -43,6 +43,7 @@ const Login = ({setAuth}) => {
   return (
     <Navbar>
     <Fragment>
+      <div className="auth-container">
     <h1 className="auth-header">Login</h1>
     <form onSubmit={onSubmitForm}>
       <p>
@@ -52,7 +53,7 @@ const Login = ({setAuth}) => {
         placeholder="email"
         value={email}
         onChange={e => onChange(e)}
-        className=""
+        className="auth-input"
       />
       </p>
       <p>
@@ -62,12 +63,13 @@ const Login = ({setAuth}) => {
         placeholder="password"
         value={password}
         onChange={e => onChange(e)}
-        className=""
+        className="auth-input"
       />
       </p>
-      <button>Submit</button>
+      <button className="auth-button">Submit</button>
     </form>
-    <Link to="/register">Make new account</Link>
+    <Link to="/register" className="auth-link">Make new account</Link>
+    </div>
   </Fragment>
   </Navbar>
   );

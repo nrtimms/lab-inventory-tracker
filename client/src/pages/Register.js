@@ -47,35 +47,43 @@ const Register = ({ setAuth }) => {
     return (
         <Navbar>
         <Fragment>
-            <h1 className="mt-5 text-center">Sign Up</h1>
+            <div className="auth-container">
+            <h1 className="auth-header">Sign Up</h1>
             <form onSubmit={onSubmitForm}>
+                <p>
                 <input
                     type="text"
                     name="email"
                     value={email}
                     placeholder="email"
                     onChange={e => onChange(e)}
-                    className="form-control my-3"
+                    className="auth-input"
                 />
+                </p>
+                <p>
                 <input
                     type="password"
                     name="password"
                     value={password}
                     placeholder="password"
                     onChange={e => onChange(e)}
-                    className="form-control my-3"
+                    className="auth-input"
                 />
+                </p>
+                <p>
                 <input
                     type="text"
                     name="name"
                     value={name}
                     placeholder="name"
                     onChange={e => onChange(e)}
-                    className="form-control my-3"
+                    className="auth-input"
                 />
-                <button className="btn btn-success btn-block">Submit</button>
+                </p>
+                <button className="auth-button">Submit</button>
             </form>
-            <Link to="/login">login</Link>
+            <Link to="/login" className="auth-link">Already have an account? Login</Link>
+            </div>
         </Fragment>
         </Navbar>
     );

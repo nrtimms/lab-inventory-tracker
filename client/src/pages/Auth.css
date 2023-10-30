@@ -1,5 +1,30 @@
-input {
+.auth-input {
     text-align: center;
     margin: auto;
     display: block;
+}
+
+.auth-container {
+    background-color: #EFF1F3;
+    width: 50%;
+    margin: auto;
+    display: block;
+    border-radius: 20px;
+    margin-top: 100px;
+}
+
+.auth-header {
+    text-align: center;
+}
+
+.auth-button {
+    margin: auto;
+    display: block;
+}
+
+.auth-link {
+    margin: auto;
+    display: block;
+    text-align: center;
+    color: black;
 }
