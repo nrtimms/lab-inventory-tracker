@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbartoo from "../../components/navbar2";
+import config from "../../config";
 
 const CreateChemical = ({setAuth}) => {
     let navigate = useNavigate();
@@ -22,7 +23,7 @@ const CreateChemical = ({setAuth}) => {
       myHeaders.append("jwt_token", localStorage.token);
 
       const body = { chem_name, molar_mass, current_amt, units, chem_loc, vendor_name, cat_num, cas_num };
-      const response = await fetch("http://localhost:3001/chemicals", {
+      const response = await fetch(`${config.api_url}/chemicals`, {
         method: "POST",
         headers: myHeaders,
         body: JSON.stringify(body)

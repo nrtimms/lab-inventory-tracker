@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbartoo from "../../components/navbar2";
+import config from "../../config"
 
 const ListChemicals = ({ setAuth }) => {
     let navigate = useNavigate();
@@ -8,7 +9,7 @@ const ListChemicals = ({ setAuth }) => {
 
     const getProfile = async () => {
         try {
-            const res = await fetch("http://localhost:3001/chemicals/", {
+            const res = await fetch(`${config.api_url}/chemicals/`, {
                 method: "GET",
                 headers: { jwt_token: localStorage.token }
             });

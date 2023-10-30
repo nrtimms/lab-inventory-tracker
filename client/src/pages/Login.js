@@ -2,6 +2,7 @@ import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/navbar";
 import "./Auth.css"
+import config from "../config";
 
 const Login = ({setAuth}) => {
     const [inputs, setInputs] = useState({
@@ -19,7 +20,7 @@ const Login = ({setAuth}) => {
         try {
           const body = { email, password };
           const response = await fetch(
-            "http://localhost:3001/authentication/login",
+            `${config.api_url}/authentication/login`,
             {
               method: "POST",
               headers: {

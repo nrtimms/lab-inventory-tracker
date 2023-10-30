@@ -2,6 +2,7 @@ import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/navbar";
 import "./Auth.css"
+import config from "../config";
 
 const Register = ({ setAuth }) => {
 
@@ -21,7 +22,7 @@ const Register = ({ setAuth }) => {
         try {
             const body = { email, password, name };
             const response = await fetch(
-                "http://localhost:3001/authentication/register",
+                `${config.api_url}/authentication/register`,
                 {
                     method: "POST",
                     headers: {

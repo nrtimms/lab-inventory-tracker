@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Navbartoo from "../../components/navbar2";
+import config from "../../config";
 
 const UpdateChemical = ({setAuth}) => {
     const { id } = useParams();
@@ -17,7 +18,7 @@ const UpdateChemical = ({setAuth}) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch(`http://localhost:3001/chemicals/${id}`, {
+                const res = await fetch(`${config.api_url}/chemicals/${id}`, {
                     method: "GET",
                     headers: { jwt_token: localStorage.token }
                 });
@@ -48,7 +49,7 @@ const UpdateChemical = ({setAuth}) => {
         myHeaders.append("Content-Type", "application/json");
         myHeaders.append("jwt_token", localStorage.token);
 
-        await fetch(`http://localhost:3001/chemicals/${id}`, {
+        await fetch(`${config.api_url}/chemicals/${id}`, {
             method: "PUT",
             headers: myHeaders,
             body: JSON.stringify(body)

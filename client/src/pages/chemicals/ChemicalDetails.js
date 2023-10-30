@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Navbartoo from "../../components/navbar2";
+import config from "../../config";
 
 
 const ChemicalDetails = ({setAuth}) => {
@@ -11,7 +12,7 @@ const ChemicalDetails = ({setAuth}) => {
 
     const getChemical = async () => {
         try {
-            const res = await fetch(`http://localhost:3001/chemicals/${id}`, {
+            const res = await fetch(`${config.api_url}/chemicals/${id}`, {
                 method: "GET",
                 headers: { jwt_token: localStorage.token }
             });
@@ -32,7 +33,7 @@ const ChemicalDetails = ({setAuth}) => {
     const handleDelete = async (e, id) => {
         e.stopPropagation();
         try {
-            await fetch(`http://localhost:3001/chemicals/${id}`, {
+            await fetch(`${config.api_url}/chemicals/${id}`, {
               method: "DELETE",
               headers: { jwt_token: localStorage.token }
             });

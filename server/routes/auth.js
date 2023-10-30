@@ -60,7 +60,7 @@ router.post("/login", validateInfo, async (req, res) => {
     const jwtToken = generateJWT(user.rows[0].user_id);
     return res.json({ jwtToken });
   } catch (err) {
-    console.error(err.message);
+    console.error("login", err.message);
     res.status(500).send("Server error");
   }
 });
