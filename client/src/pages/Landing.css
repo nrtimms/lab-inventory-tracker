@@ -2,7 +2,11 @@ body {
     background-color: #D8B4A0;
 }
 
-h1, p {
+.landing-h1, .landing-p {
     color: #223843;
     text-align: center;
+}
+
+.landing-h1 {
+    padding-top: 200px;
 }

@@ -6,8 +6,8 @@ const Landing = () => {
   return (
     <Navbar>
     <div className="landing">
-      <h1>Track your chemicals!</h1>
-      <p>Sign In and track your chemical library</p>
+      <h1 className="landing-h1">Track your chemicals!</h1>
+      <p className="landing-p">Sign In and track your chemical library</p>
     </div>
     </Navbar>
   );
