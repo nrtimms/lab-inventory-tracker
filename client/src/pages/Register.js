@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Navbar from "../components/navbar";
+import "./Auth.css"
 
 const Register = ({ setAuth }) => {
 

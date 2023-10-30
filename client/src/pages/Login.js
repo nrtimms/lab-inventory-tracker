@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Navbar from "../components/navbar";
+import "./Auth.css"
 
 const Login = ({setAuth}) => {
     const [inputs, setInputs] = useState({
@@ -41,24 +42,28 @@ const Login = ({setAuth}) => {
   return (
     <Navbar>
     <Fragment>
-    <h1 className="mt-5 text-center">Login</h1>
+    <h1 className="auth-header">Login</h1>
     <form onSubmit={onSubmitForm}>
+      <p>
       <input
         type="text"
         name="email"
         placeholder="email"
         value={email}
         onChange={e => onChange(e)}
-        className="form-control my-3"
+        className=""
       />
+      </p>
+      <p>
       <input
         type="password"
         name="password"
         placeholder="password"
         value={password}
         onChange={e => onChange(e)}
-        className="form-control my-3"
+        className=""
       />
+      </p>
       <button>Submit</button>
     </form>
     <Link to="/register">Make new account</Link>
