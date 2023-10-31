@@ -35,3 +35,8 @@
 .list-padding {
     padding: 20px;
 }
+
+.list-chem:hover {
+    color: #D77A61;
+    border-color: black;
+}

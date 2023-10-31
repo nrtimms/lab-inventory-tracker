@@ -53,7 +53,7 @@ const ListChemicals = ({ setAuth }) => {
                         </tr>
                         {chemicals && chemicals.map((chem) => (
                             <tr>
-                                <td onClick={() => handleChemicalSelect(chem.chem_id)}>{chem.chem_name}</td>
+                                <td onClick={() => handleChemicalSelect(chem.chem_id)} className="list-chem">{chem.chem_name}</td>
                                 <td>{chem.current_amt}</td>
                                 <td>{chem.units}</td>
                                 <td>{chem.chem_loc}</td>
