@@ -39,10 +39,10 @@ const ListChemicals = ({ setAuth }) => {
     return (
         <Navbartoo setAuth={setAuth}>
             <div>
-                <h1 className="list-header">Chemical Library!</h1>
-                <button onClick={e => handleNew(e)} className="list-button">
-                    New
-                </button>
+                <h1 className="list-header">Chemical Library</h1>
+                <div className="list-padding"><button onClick={e => handleNew(e)} className="list-button">
+                    Add new chemical
+                </button></div>
                 <div>
                     <table className="list-table">
                         <tr>

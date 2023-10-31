@@ -15,11 +15,22 @@
 
 .auth-header {
     text-align: center;
+    color: #223843;
 }
 
 .auth-button {
     margin: auto;
     display: block;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #D77A61;
+    border: 1px solid #D77A61;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.auth-button:hover {
+    background-color: #d19483;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .auth-link {
@@ -27,4 +38,8 @@
     display: block;
     text-align: center;
     color: black;
+}
+
+.auth-link:hover {
+    color: #d77a61;
 }

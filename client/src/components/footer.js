@@ -4,9 +4,11 @@ import './footer.css';
 const Footer = () => {
   return (
     <div className="footer">
-      <p>&copy; 2023 </p>
-      <p> About Us</p>
-      <p> Contact Us</p>
+      <img src="https://i.imgur.com/os8lEFq.png" alt="Chemical Logo" className="footer-logo" />
+      <div className='footer-padding'>
+      <p className='footer-text'> About Us</p>
+      <p className='footer-text'> Contact Us</p>
+      </div>
     </div>
   );
 };

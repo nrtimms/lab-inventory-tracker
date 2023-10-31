@@ -51,9 +51,9 @@ const CreateChemical = ({setAuth}) => {
   return (
     <Navbartoo setAuth={setAuth}>
     <Fragment>
-      <h1 className="create-update-header">Add new chemical</h1>
+      <h1 className="create-update-header">Add a new chemical</h1>
       <form onSubmit={onSubmitForm}>
-      <p className="create-update-text">Chem Name:</p>
+      <p className="create-update-text">Chemical Name:</p>
         <input
           type="text"
           placeholder="chemical name"
@@ -101,7 +101,7 @@ const CreateChemical = ({setAuth}) => {
           value={vendor_name}
           onChange={e => setVendor_name(e.target.value)}
         />
-        <p className="create-update-text">Category Number:</p>
+        <p className="create-update-text">Cat Number:</p>
         <input
           type="text"
           placeholder="cat number"
@@ -117,7 +117,7 @@ const CreateChemical = ({setAuth}) => {
           value={cas_num}
           onChange={e => setCas_num(e.target.value)}
         />
-        <button className="create-update-button">Add</button>
+        <div className="create-update-padding"><button className="create-update-button">Add</button></div>
       </form>
     </Fragment>
     </Navbartoo>

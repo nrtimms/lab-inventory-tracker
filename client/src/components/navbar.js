@@ -12,7 +12,7 @@ const Navbar = ({ children }) => {
           <div className="nav-buttons">
             {/* <a href='/' target="_blank"><img src="./logo.svg" alt="Logo" className="logo" /></a> */}
             <Link to="/">
-              <img src="" alt="Chemical Logo" className="logo" />
+              <img src="https://i.imgur.com/os8lEFq.png" alt="Chemical Logo" className="logo" />
             </Link>
           </div>
 

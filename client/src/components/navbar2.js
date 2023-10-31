@@ -18,20 +18,13 @@ const Navbartoo = ({ children, setAuth }) => {
     <div className='app-container'>
       <div className="top-navbar">
         <div className="left-section">
-          <div className="nav-buttons">
             <Link to="/">
-              <img src="./logo.svg" alt="Logo" className="logo" />
+              <img src="https://i.imgur.com/os8lEFq.png" alt="Chemistry Logo" className="logo" />
             </Link>
-            <Link to="/chemicals">
-              <button className="nav-button">Home</button>
-            </Link>
-          </div>
 
         </div>
         <div className="right-section">
-            <button onClick={e => logout(e)} className="btn btn-primary">
-                Logout
-            </button>
+            <button onClick={e => logout(e)} className="account-button">Logout</button>
         </div>
 
       </div>

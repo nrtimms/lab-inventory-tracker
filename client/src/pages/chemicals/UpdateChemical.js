@@ -63,7 +63,7 @@ const UpdateChemical = ({setAuth}) => {
         <Navbartoo setAuth={setAuth}>
         <div>
                 <h1 className="create-update-header">Edit chemical</h1>
-                <p className="create-update-text">Chem Name:</p>
+                <p className="create-update-text">Chemical Name:</p>
                 <div>
                     <input
                     value={chem_name}
@@ -99,7 +99,7 @@ const UpdateChemical = ({setAuth}) => {
                     className="create-update-input"
                     />
                 </div>
-                <p className="create-update-text">Chemical Location:</p>
+                <p className="create-update-text">Location:</p>
                 <div>
                     <input
                     value={chem_loc}
@@ -108,7 +108,7 @@ const UpdateChemical = ({setAuth}) => {
                     className="create-update-input"
                     />
                 </div>
-                <p className="create-update-text">Vendor name:</p>
+                <p className="create-update-text">Vendor:</p>
                 <div>
                     <input
                     value={vendor_name}
@@ -135,9 +135,9 @@ const UpdateChemical = ({setAuth}) => {
                     className="create-update-input"
                     />
                 </div>
-    <button onClick={handleSubmit} type="submit" className="create-update-button">
+    <div className="create-update-padding"><button onClick={handleSubmit} type="submit" className="create-update-button">
         Save
-    </button>
+    </button></div>
     </div> 
     </Navbartoo>        
   );

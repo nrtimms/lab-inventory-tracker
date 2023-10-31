@@ -20,7 +20,7 @@
 }
 
 .top-navbar {
-    background-color: #D77A61;
+    background-color: #223843;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -31,67 +31,19 @@
 
 
 .logo {
-    width: 180px;
+    width: 105px;
+    height: 85px;
+    padding: 5px;
+    padding-left: 20px;
 }
 
 .navbar {
-    background-color: #D77A61;
+    background-color: #223843;
     color: white;
     padding: 10px;
     display: flex;
     justify-content: space-between;
     width: 100%;
-}
-
-.nav-button {
-    background-color: #EFF1F3;
-    color: #000000;
-    border: 1px solid #D77A61;
-    padding: 10px 15px;
-    /* Increased padding */
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    margin-right: 5px;
-    border-radius: 5px;
-    /* Rounded corners */
-}
-
-.nav-button:last-child {
-    margin-right: 0;
-}
-
-.nav-button:hover {
-    background-color: #D77A61;
-    color: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow on hover */
-}
-
-.sidebar {
-    width: 200px;
-    background-color: #f0f0f0;
-    padding: 10px;
-}
-
-.side-button {
-    background-color: #EFF1F3;
-    color: #000000;
-    border: 1px solid #D77A61;
-    padding: 10px;
-    /* Increased padding */
-    display: block;
-    margin: 5px 0;
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    border-radius: 5px;
-    /* Rounded corners */
-}
-
-.side-button:hover {
-    background-color: #EFF1F3;
-    color: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow on hover */
 }
 
 .main-content {
@@ -113,7 +65,7 @@
 }
 
 .navbar {
-    background-color: #D77A61;
+    background-color: #223843;
     color: white;
     padding: 10px;
     display: flex;
@@ -121,38 +73,19 @@
     /* Separate content into left and right */
 }
 
-.nav-buttons {
-    display: flex;
-    gap: 5px;
-    /* Spacing between buttons */
-}
-
-.nav-button {
-    background-color: white;
-    color: #D77A61;
-    border: 1px solid #D77A61;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    border-radius: 5px;
-}
-
-.nav-button:hover {
-    background-color: #D77A61;
-    color: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
 .account-button {
-    background-color: #EFF1F3;
+    background-color: #D77A61;
     color: #000000;
-    border: 1px solid #D77A61;
-    padding: 10px 15px;
+    border: 1px solid #223843;
+    padding: 10px;
     cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.3s;
     border-radius: 5px;
-    height: 50%;
+    height: 60%;
     font-size: 20px;
+    text-align: center;
+    vertical-align: middle;
+    margin: auto;
 }
 
 .account-button:hover {
@@ -164,7 +97,7 @@
 /* Rest of the CSS remains the same */
 
 .navbar {
-    background-color: #D77A61;
+    background-color: #223843;
     color: white;
     padding: 10px;
     display: flex;
@@ -186,21 +119,7 @@
     margin-right: 12px;
 }
 
-.nav-buttons {
-    display: flex;
-    gap: 5px;
-}
 
-.nav-button {
-    background-color: white;
-    color: #000000;
-    border: 1px solid #FFC0CB;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    border-radius: 5px;
-    font-size: 20px;
-}
 
 /* Rest of the CSS remains the same */
 
